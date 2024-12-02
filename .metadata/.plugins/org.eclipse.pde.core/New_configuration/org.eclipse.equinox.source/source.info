@@ -1,0 +1,8 @@
+#encoding=UTF-8
+#version=1
+com.codeaffine.archive.contenttype.source,0.1.0.20190630-1554,file:/C:/Users/LENOVO/.p2/pool/plugins/com.codeaffine.archive.contenttype.source_0.1.0.20190630-1554.jar,-1,false
+com.codeaffine.archive.ui.source,0.1.0.20190630-1554,file:/C:/Users/LENOVO/.p2/pool/plugins/com.codeaffine.archive.ui.source_0.1.0.20190630-1554.jar,-1,false
+org.eclipse.rap.tools.intro.source,4.0.0.20240621-0906,file:/C:/Users/LENOVO/.p2/pool/plugins/org.eclipse.rap.tools.intro.source_4.0.0.20240621-0906.jar,-1,false
+org.eclipse.rap.tools.launch.rwt.source,4.0.0.20240621-0906,file:/C:/Users/LENOVO/.p2/pool/plugins/org.eclipse.rap.tools.launch.rwt.source_4.0.0.20240621-0906.jar,-1,false
+org.eclipse.rap.tools.launch.source,4.0.0.20240731-1913,file:/C:/Users/LENOVO/.p2/pool/plugins/org.eclipse.rap.tools.launch.source_4.0.0.20240731-1913.jar,-1,false
+org.eclipse.rap.tools.templates.source,4.0.0.20240821-1037,file:/C:/Users/LENOVO/.p2/pool/plugins/org.eclipse.rap.tools.templates.source_4.0.0.20240821-1037.jar,-1,false

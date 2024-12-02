@@ -1,0 +1,8 @@
+package com.sonix;
+
+public class CheckDB {
+	public boolean checkConnection(String username, String password) {
+		
+	}
+
+}

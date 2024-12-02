@@ -1,0 +1,15 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div style="font-size:50px;">
+<footer style="color:blue; text-align:center;display : block; position: absolute;bottom: 0;right:0;font-size=50px;">This Page Created by Srinivas</footer>
+
+</div>
+</body>
+</html>

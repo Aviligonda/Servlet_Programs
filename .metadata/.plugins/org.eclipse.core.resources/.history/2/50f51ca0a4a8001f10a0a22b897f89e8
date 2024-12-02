@@ -1,0 +1,47 @@
+package com.sonix;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+/**
+ * Servlet implementation class NewRegistrationServlet
+ */
+@WebServlet("/NewRegistrationServlet")
+public class NewRegistrationServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		
+
+		response.setContentType("text/html");
+		PrintWriter outPrintWriter=response.getWriter();
+		try {
+			Class.forName("com.mysql.jdbc.Driver";)
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		if (name.matches("[A-Z][a-z]{2,}") && email.matches("[a-z\\d]{3,}@[a-z]{2,}.[a-z]{2,}")
+
+				&& username.matches("[\\w]{3,}") && password.matches("[\\w]{6,}")) {
+
+			outPrintWriter.println("Form Submitted Successfully! ");
+
+		} else {
+
+			outPrintWriter.println("Form Submitted Failed");
+
+		}
+	}
+
+}

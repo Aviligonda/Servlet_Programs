@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<%@ include file="header.jsp" %>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>New Registrstion</title>
+</head>
+<body>
+<form action="addStudent.jsp">
+ID: <br>
+<input type ="text" name="id"> <br>
+Name: <br>
+<input type ="text" name="name"> <br>
+Branch: <br>
+<input type ="text" name="branch"> <br>
+Contact Number: <br>
+<input type ="text" name="contact"> <br>
+<input type="submit" value="Submit">
+
+</form>
+
+</body>
+</html>

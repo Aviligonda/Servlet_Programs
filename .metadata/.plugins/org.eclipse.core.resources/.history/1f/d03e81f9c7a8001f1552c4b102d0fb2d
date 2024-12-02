@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Login Ppage </title>
+</head>
+<body>
+Username : <input type="text" name="uname"><br>
+Password : <input type="passoword" name="pa"
+
+</body>
+</html>

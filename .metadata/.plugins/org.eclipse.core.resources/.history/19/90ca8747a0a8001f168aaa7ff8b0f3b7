@@ -1,0 +1,43 @@
+package com.sonix;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+@WebServlet("/FirstWebProject")
+public class FirstWebProject extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	@SuppressWarnings("unused")
+	protected void doPost(HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+//		response.setContentType("text//html");
+
+		PrintWriter out = response.getWriter();
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/logindb","root","Sravani@6086"
+//					System.getenv("username"), System.getenv("password"));
+			out.println("Welcome to Frist Web Project");
+			Statement statement = connection.createStatement();
+			ResultSet resultSet = statement.executeQuery("select * from login");)
+			while (resultSet.next()) {
+				out.print(resultSet.getString(1) + " " + resultSet.getString(2));
+			}
+
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+	}
+
+}

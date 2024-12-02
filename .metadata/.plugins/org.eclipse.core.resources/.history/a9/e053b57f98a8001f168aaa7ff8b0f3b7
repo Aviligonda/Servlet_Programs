@@ -1,0 +1,32 @@
+package com.db;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class JDBC {
+	
+	public boolean check(String userName , String passWord) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/logindb",System.getenv("username"),System.getenv("password"));
+			PreparedStatement pStatement = connection.prepareStatement("selcet * from logindb where uname="+ userName+" and pass ="+passWord);
+//			pStatement.setString(1, userName);
+			pStatement.setString(2, passWord);
+			ResultSet resultSet = pStatement.executeQuery();
+			if (resultSet.next()) {
+				return true;
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+		return false;
+	}
+public static void main(String[] args) {
+	JDBC dJdbc = new JDBC();
+	System.out.println(dJdbc.check("anji", "123"));
+}
+}

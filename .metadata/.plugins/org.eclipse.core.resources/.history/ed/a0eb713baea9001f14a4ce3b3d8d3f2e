@@ -1,0 +1,32 @@
+<%@page import="java.sql.PreparedStatement"%>
+<%@page import="java.sql.DriverManager"%>
+<%@page import="java.sql.Connection"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add</title>
+</head>
+<body>
+	<%
+	out.println("Adding a new Student");
+	String id = request.getParameter("id");
+	String name = request.getParameter("name");
+	String branch = request.getParameter("bracnh");
+	String contactNumber = request.getParameter("contact");
+	Class.forName("com.mysql.jdbc.Driver");
+	Connection connection =DriverManager.getConnection("jdbc:mysql://localhost:3306/logindb","root","Sravani@6086");
+	PreparedStatement pStatement=connection.prepareStatement("insert into sms values(?,?,?,?)");
+	pStatement.setString(1, id);
+	pStatement.setString(2, name);
+	pStatement.setString(3, branch);
+	pStatement.setString(4, contactNumber);
+	pStatement.execute();
+	
+	
+	
+	%>
+</body>
+</html>

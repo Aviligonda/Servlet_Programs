@@ -1,0 +1,6 @@
+package com.sonix;
+
+public class CheckDB {
+	public boolean checkConnection
+
+}

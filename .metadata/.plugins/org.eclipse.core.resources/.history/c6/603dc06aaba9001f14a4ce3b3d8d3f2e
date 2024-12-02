@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>New Registrstion</title>
+</head>
+<body>
+<form action="addStudent.jsp">
+Name: <br>
+<input type ="text" name="id">
+Name: <br>
+<input type ="text" name="id">
+Name: <br>
+<input type ="text" name="id">
+
+
+</form>
+
+</body>
+</html>

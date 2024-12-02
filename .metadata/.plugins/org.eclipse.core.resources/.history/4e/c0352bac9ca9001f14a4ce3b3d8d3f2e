@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML page</title>
+</head>
+<body>
+<form action="simple.jsp">
+<input type= "text" name= "name">
+<input type="submit" value
+</form>
+
+</body>
+</html>

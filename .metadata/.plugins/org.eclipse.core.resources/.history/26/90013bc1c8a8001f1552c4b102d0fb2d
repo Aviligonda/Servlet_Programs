@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>New Registration</title>
+</head>
+<body>
+<form action="Login" method="post">
+        Name : <input type="text" name="name"><br> 
+		email : <input type="text" name="email"><br> 
+		Username : <input type="text" name="username"><br> 
+		Password : <input type="password" name="password"><br> 
+		<input type="submit" value=Re>
+		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		<a href="register.html"> Click here to register</a>
+	</form>
+</body>
+</html>

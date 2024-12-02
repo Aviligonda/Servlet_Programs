@@ -1,0 +1,19 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add</title>
+</head>
+<body>
+	<%
+	out.println("Adding a new Student");
+	String id = request.getParameter("id");
+	String name = request.getParameter("name");
+	String branch = request.getParameter("bracnh");
+	String contactNumber = request.getParameter("contact");
+	
+	%>
+</body>
+</html>

@@ -1,0 +1,39 @@
+package com.sonix;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+public class CheckDB {
+	public boolean checkConnection(String uname, String pass) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+			Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/logindb", "root",
+					"Sravani@6086");
+//			System.out.println("1");
+
+			PreparedStatement pStatement = connection
+					.prepareStatement("SELECT * FROM logindb.user_info where username =  and password = '123'");
+			pStatement.setString(1, uname);
+			pStatement.setString(2, pass);
+			ResultSet resultSet= pStatement.executeQuery();
+			if (resultSet.next()) {
+				System.out.println("2");
+				return true;
+				
+			}
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		return false;
+
+	}
+	public static void main(String[] args) {
+		CheckDB checkDB = new CheckDB();
+		System.out.println(checkDB.checkConnection("abc", "123"));
+	}
+
+}

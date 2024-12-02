@@ -1,0 +1,47 @@
+package com.sonix;
+
+import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.WebServlet;
+import jakarta.servlet.http.HttpServlet;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+
+/**
+ * Servlet implementation class NewRegistrationServlet
+ */
+@WebServlet("/NewRegistrationServlet")
+public class NewRegistrationServlet extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+
+	
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String username = request.getParameter("username");
+		String password = request.getParameter("password");
+		DatabaseConnection dc= new DatabaseConnection();
+
+		
+		PrintWriter outPrintWriter=response.getWriter();
+		if (name.matches("[A-Z][a-z]{2,}") && email.matches("[a-z\\d]{3,}@[a-z]{2,}.[a-z]{2,}")
+
+				&& username.matches("[\\w]{3,}") && password.matches("[\\w]{6,}")) {
+			dc.register(name, email, username, password);
+			
+
+			outPrintWriter.println("Form Submitted Successfully! ");
+			outPrintWriter.print("<a href=''");
+			
+
+		} else {
+
+			outPrintWriter.println("Form Submitted Failed");
+
+		}
+	}
+
+}
